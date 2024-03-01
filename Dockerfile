@@ -8,6 +8,7 @@ RUN chmod 777 95.ckpt
 RUN apt-get update && apt-get install -y libgl1-mesa-glx
 RUN pip install --upgrade pip
 RUN pip install --no-cache-dir -r requirements.txt
+COPY --chmod=644 95.ckpt /src/95.ckpt
 
 EXPOSE 8000 
 
