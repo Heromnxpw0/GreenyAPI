@@ -109,7 +109,7 @@ class AlexNet(nn.Cell):
         self.conv5 = nn.Conv2d(384, 256, 3, pad_mode='same', group=2)
         self.flatten = nn.Flatten()
         self.dense1 = nn.Dense(256*6*6, 4096)
-        self.dropout = nn.Dropout(0.5)
+        self.dropout = nn.Dropout(p = 0.5)
         self.dense2 = nn.Dense(4096, 4096)
         self.dense3 = nn.Dense(4096, num_classes)
 
