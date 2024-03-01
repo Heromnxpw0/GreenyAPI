@@ -142,9 +142,6 @@ model = Model(net, loss_fn=loss, optimizer=optimizer, metrics={"accuracy"})
 descriptions = open("json.json", 'r').read()
 descriptions = json.loads(descriptions)
 
-
-
-
 app = FastAPI() 
 
 origins = ['*']
@@ -188,5 +185,3 @@ async def describe(plant: str = Query(..., description="The name of the plant to
     print(plant)
     return JSONResponse(content = {plant : descriptions[plant]})
 
-if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
