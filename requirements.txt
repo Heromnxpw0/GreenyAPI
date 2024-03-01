@@ -1,0 +1,6 @@
+mindspore
+numpy
+opencv-python
+fastapi
+uvicorn
+gunicorn
