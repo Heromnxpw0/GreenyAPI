@@ -1,3 +1,4 @@
+mindspore
 numpy
 opencv-python
 fastapi
